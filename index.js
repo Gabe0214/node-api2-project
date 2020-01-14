@@ -4,6 +4,8 @@ const blogRoutes = require('./blogRoutes/blogRoutes.js')
 
 const server = express();
 
+server.use(express.json()); 
+
 server.use('/blogs/api', blogRoutes)
 
 server.use('/', (req, res) => {
